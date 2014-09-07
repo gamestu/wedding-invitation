@@ -577,15 +577,17 @@ html {
 body {
   background-color: black;
   background-image: url('http://gamestu.github.io/wedding-invitation/images/body-bg.png?1404382746');
-  font-family: noto, sans-serif; }
+  font-family: noto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
-/* line 32, ../sass/screen.scss */
+/* line 34, ../sass/screen.scss */
 .wrapper {
   width: 100%;
   max-width: 800px;
   margin: 0 auto; }
 
-/* line 38, ../sass/screen.scss */
+/* line 40, ../sass/screen.scss */
 .header {
   margin-top: 48px;
   background-position: center;
@@ -604,23 +606,23 @@ body {
   -moz-transition-timing-function: ease;
   -o-transition-timing-function: ease;
   transition-timing-function: ease; }
-  /* line 47, ../sass/screen.scss */
+  /* line 49, ../sass/screen.scss */
   .header.index {
     background-image: url('http://gamestu.github.io/wedding-invitation/images/index-header.jpg?1410063086');
     height: 600px; }
-  /* line 51, ../sass/screen.scss */
+  /* line 53, ../sass/screen.scss */
   .header.gallery {
     height: 120px; }
-  /* line 54, ../sass/screen.scss */
+  /* line 56, ../sass/screen.scss */
   .header .title {
     font-size: 2.25em;
     line-height: 1.33333em; }
-  /* line 57, ../sass/screen.scss */
+  /* line 59, ../sass/screen.scss */
   .header .subtitle {
     font-size: 2.25em;
     line-height: 1.33333em;
     font-family: 'Marck Script', cursive; }
-  /* line 61, ../sass/screen.scss */
+  /* line 63, ../sass/screen.scss */
   .header .wording {
     position: absolute;
     bottom: 0;
@@ -632,7 +634,7 @@ body {
     text-align: center;
     padding-top: 0.75em;
     padding-bottom: 0.75em; }
-  /* line 73, ../sass/screen.scss */
+  /* line 75, ../sass/screen.scss */
   .header .curtain {
     background-color: rgba(0, 0, 0, 0.3);
     position: absolute;
@@ -652,25 +654,25 @@ body {
     -moz-transition-timing-function: ease;
     -o-transition-timing-function: ease;
     transition-timing-function: ease; }
-  /* line 84, ../sass/screen.scss */
+  /* line 86, ../sass/screen.scss */
   .header:hover {
     background-size: auto 105%; }
-    /* line 86, ../sass/screen.scss */
+    /* line 88, ../sass/screen.scss */
     .header:hover .curtain {
       background: transparent; }
 
-/* line 92, ../sass/screen.scss */
+/* line 94, ../sass/screen.scss */
 .more {
   position: absolute;
   right: 8px;
   top: 40%;
   background: rgba(128, 0, 128, 0.8);
   padding-left: 10px; }
-  /* line 98, ../sass/screen.scss */
+  /* line 100, ../sass/screen.scss */
   .more a {
     text-decoration: none;
     color: white; }
-  /* line 103, ../sass/screen.scss */
+  /* line 105, ../sass/screen.scss */
   .more:after {
     content: "";
     position: absolute;
@@ -682,23 +684,23 @@ body {
     border-width: 20px 0 20px 20px;
     border-color: transparent transparent transparent rgba(128, 0, 128, 0.8); }
 
-/* line 116, ../sass/screen.scss */
+/* line 118, ../sass/screen.scss */
 .info {
   display: table;
   width: 100%;
   background-color: rgba(235, 235, 235, 0.6);
   background-image: url('http://gamestu.github.io/wedding-invitation/images/topbar-bg.png?1391454765'); }
-  /* line 121, ../sass/screen.scss */
+  /* line 123, ../sass/screen.scss */
   .info div {
     display: table-cell;
     padding: 10px;
     vertical-align: middle;
     width: 66%; }
-  /* line 127, ../sass/screen.scss */
+  /* line 129, ../sass/screen.scss */
   .info .basic-info {
     background-color: rgba(255, 255, 0, 0.3);
     border-left: 5px solid #f60; }
-    /* line 131, ../sass/screen.scss */
+    /* line 133, ../sass/screen.scss */
     .info .basic-info i {
       display: -moz-inline-stack;
       display: inline-block;
@@ -708,10 +710,10 @@ body {
       *display: inline;
       width: 1.5em;
       text-align: center; }
-  /* line 142, ../sass/screen.scss */
+  /* line 144, ../sass/screen.scss */
   .info .detail-info {
     text-align: center; }
-    /* line 144, ../sass/screen.scss */
+    /* line 146, ../sass/screen.scss */
     .info .detail-info a {
       background-color: #09f;
       color: white;
@@ -726,10 +728,10 @@ body {
       *display: inline;
       font-size: 1.125em;
       line-height: 2em; }
-      /* line 152, ../sass/screen.scss */
+      /* line 154, ../sass/screen.scss */
       .info .detail-info a:hover {
         background-color: #006bb3; }
 
-/* line 159, ../sass/screen.scss */
+/* line 161, ../sass/screen.scss */
 .main-content {
   background-color: white; }

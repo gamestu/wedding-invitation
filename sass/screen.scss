@@ -27,6 +27,8 @@ body{
   background-color: black;
   background-image: image-url("body-bg.png");
   font-family: noto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .wrapper{
