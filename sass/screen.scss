@@ -5,6 +5,16 @@
 @import "layout";
 @import "compass/reset";
 @import "topbar";
+@import "form";
+@import "gallery";
+
+@import url(http://fonts.googleapis.com/css?family=Marck+Script);
+
+@font-face {
+  font-family: noto;
+  src: url(../fonts/NotoSansHant-Regular.otf);
+}
+
 
 html{
   min-height: 100%;
@@ -13,8 +23,9 @@ html{
 
 
 body{
-  background-color: white;
+  background-color: black;
   background-image: image-url("body-bg.png");
+  font-family: noto, sans-serif;
 }
 
 .wrapper{
@@ -25,21 +36,125 @@ body{
 
 .header{
   margin-top: $nav-height;
-  background-image: image-url("A1-IMG_6556.jpg");
-  height: 600px;
   background-position: center;
   background-size: auto 100%;
   background-repeat: no-repeat;
+  position: relative;
+  @include transition-property(all);
+  @include transition-duration(1s);
+  @include transition-timing-function(ease);
+  &.index{
+    background-image: image-url("index-header.jpg");
+    height: 600px;  
+  }
+  &.gallery{
+    height: 120px;
+  }
   .title{
     @include adjust-font-size-to(36px, 2);
   }
   .subtitle{
     @include adjust-font-size-to(36px, 2); 
+    font-family: 'Marck Script', cursive;
+  }
+  .wording{
+    position:absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    left: 0;
+    right: 0;
+    padding: 0 $gutter-width;
+    text-align: center;
+    @include padding-leader(0.5);
+    @include padding-trailer(0.5);
+  }
+  .curtain{
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    @include transition-property(all);
+    @include transition-duration(3s);
+    @include transition-timing-function(ease);
+  }
+  &:hover{
+    background-size: auto 105%;
+    .curtain{
+      background: transparent;  
+    }
   }
 }
 
+.more{
+  position: absolute;
+  right: 8px;
+  top: 40%;
+  background: rgba(purple, 0.8);
+  padding-left: $gutter-width;
+  a{
+    text-decoration: none;
+    color: white;
+  }
 
+  &:after{
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 0 20px 20px;
+    border-color: transparent transparent transparent rgba(purple, 0.8);
+  }
+}
+
+.info{
+  display: table;
+  width: 100%;
+  background-color: rgba(235,235,235,0.6);
+  background-image: image-url("topbar-bg.png");
+  div{
+    display: table-cell;
+    padding: $gutter-width;
+    vertical-align: middle;
+    width: 66%;
+  }
+  .basic-info{
+    // background-color: #e2e2e2;
+    background-color: rgba(yellow,0.3);
+    border-left: 5px solid #f60;
+    i{
+      @include inline-block;
+      width: 1.5em;
+      text-align: center;
+    }
+    // p:before{
+    //   content: "\f005";
+    //   font-family: FontAwesome;
+    //   margin-right: 5px;
+    // }
+  }
+  .detail-info{
+    text-align: center;
+    a{
+      background-color: #09f;
+      color: white;
+      text-decoration: none;
+      padding: 0 $gutter-width;
+      border-radius: 3px;
+      @include inline-block;
+      @include adjust-font-size-to(18px, 1.5);
+      &:hover{
+        background-color: adjust-lightness(#09f, -15%);
+      }
+    }
+  }
+}
 
 .main-content{
-  background-color: rgba(255,255,255,.6);
+  background-color: rgba(255,255,255,1);
 }

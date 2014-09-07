@@ -1,0 +1,75 @@
+@import "layout";
+
+.ss-form{
+  padding: 0 $gutter-width;
+  // @include padding-leader(1);
+  @include padding-trailer(1);
+  .ss-required-asterisk{
+    color: #F60;
+  }
+  .ss-q-title{
+    @include inline-block;
+    border-bottom: 1px solid #09f;
+    // background-color: adjust-lightness(#09f, 20%);
+    color: adjust-lightness(#09f, -20%);
+    @include adjust-font-size-to(18px, 1);
+    @include margin-trailer(0.5);
+    margin-left: 0 - $gutter-width * 2;
+    padding-left: $gutter-width * 2;
+    font-weight: bold;
+  }
+  .ss-choice-item{
+    label{
+      display: block;
+    }
+  }
+  .required-message{
+    display: none;
+  }
+  [role=listitem]{
+    border-top: 1px dotted #ccc;
+    padding: 0 $gutter-width;
+    @include padding-leader(1);
+    @include padding-trailer(1);
+    &:hover{
+      background-color: #fcfcfc;
+    }
+  }
+  %input-style{
+    border: 0;
+    background-color: #fff;
+    border: 2px solid #e2e2e2;
+    padding: 0 $gutter-width;
+    @include padding-leader(0.5);
+    @include padding-trailer(0.5);
+    @include transition-property(background-color width);
+    @include transition-duration(0.3s);
+    @include transition-timing-function(ease);
+  }
+  textarea{
+    @extend %input-style;
+    width: 20em;
+    height: 48px;
+    resize: none;
+  }
+  input[type=text]{
+    @extend %input-style;
+    width: 10em;
+    
+  }
+  input[type=text]:focus{
+    background-color: adjust-lightness(yellow, 30%);
+    // background-color: adjust-lightness(#09f, 40%);
+    width: 20em;
+  }
+  textarea:focus{
+    background-color: adjust-lightness(yellow, 30%);
+    width: 40em; 
+  }
+  
+}
+
+#ss-submit[type=submit]{
+  display: block;
+  width: 100%;
+}

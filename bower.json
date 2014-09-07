@@ -18,6 +18,7 @@
     "tests"
   ],
   "dependencies": {
-    "headroom.js": "~0.7.0"
+    "headroom.js": "~0.7.0",
+    "fancybox": "~2.1.5"
   }
 }

@@ -1,1 +1,1 @@
-$(document).ready(function(){$(".topbar").headroom()});
+$(document).ready(function(){$(".topbar").headroom();$(".fancybox").fancybox()});

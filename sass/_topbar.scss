@@ -3,26 +3,41 @@
 
 .topbar{
   position: fixed;
-  background-color: rgba(0,0,0,0.6);
+  background-color: #fefefe;
+  background-image: image-url("topbar-bg.png");
   height: $nav-height;
-  color: white;
+  color: #333;
   left: 0;
   top: 0;
   right: 0;
   width: 100%;
   text-align: right;
+  z-index: 5;
   @include transition-property(all);
   @include transition-duration(0.3s);
   @include transition-timing-function(ease);
   &.headroom--unpinned{
-    @include transform(translateY(0 - $nav-height));
+    @include transform(translateY(-100%));
     
   }
   li{
     @include inline-block;
-    @include adjust-font-size-to(20px, 3);
+    @include adjust-font-size-to(18px, 2);
+    padding: 0 $gutter-width;
+    @include transition-property(all);
+    @include transition-duration(0.3s);
+    @include transition-timing-function(ease);
+    a{
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
     &.left{
       float: left;
+    }
+    &.active,&:hover{
+      background: #333;
+      color: white;
     }
   }
 }
