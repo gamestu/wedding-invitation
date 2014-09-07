@@ -1,3 +1,4 @@
+@import "compass/css3";
 @import "compass/typography/vertical_rhythm";
 
 $nav-height: 48px;
@@ -7,3 +8,17 @@ $gutter-width: 10px;
 $base-font-size:16px;
 $base-line-height:24px;
 @include establish-baseline;
+
+$title-color: adjust-lightness(#09f, -20%);
+
+%title-style{
+  @include inline-block;
+  border-bottom: 1px solid #09f;
+  // background-color: adjust-lightness(#09f, 20%);
+  color: $title-color;
+  @include adjust-font-size-to(18px, 1);
+  @include margin-trailer(0.5);
+  margin-left: 0 - $gutter-width * 2;
+  padding-left: $gutter-width * 2;
+  font-weight: bold;
+}

@@ -8,15 +8,7 @@
     color: #F60;
   }
   .ss-q-title{
-    @include inline-block;
-    border-bottom: 1px solid #09f;
-    // background-color: adjust-lightness(#09f, 20%);
-    color: adjust-lightness(#09f, -20%);
-    @include adjust-font-size-to(18px, 1);
-    @include margin-trailer(0.5);
-    margin-left: 0 - $gutter-width * 2;
-    padding-left: $gutter-width * 2;
-    font-weight: bold;
+    @extend %title-style;
   }
   .ss-choice-item{
     label{

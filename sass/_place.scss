@@ -1,0 +1,36 @@
+@import "layout";
+
+.place-container{
+  @include box-sizing(border-box);
+  padding: 0 $gutter-width * 2;
+  @include padding-leader(1);
+  @include padding-trailer(1);
+  h2>span{
+    @extend %title-style;
+  }
+  table{
+    width: 90%;
+    margin-right: 10%;
+  }
+  td{
+    vertical-align: top;
+    padding: $gutter-width/2;
+  }
+  td:first-child{
+    width: 8em;
+    text-align: right;
+  }
+  td:nth-child(2){
+    border-bottom: 1px solid #ccc;
+  }
+  .map{
+    margin: 0 0 - $gutter-width * 2;
+  }
+  // ul{
+  //   margin-left: 33%;
+  //   li{
+  //     text-indent: -3em;
+  //     @include margin-trailer(0.5);
+  //   }
+  // }
+}
