@@ -81,7 +81,7 @@ html {
 .topbar {
   position: fixed;
   background-color: #fefefe;
-  background-image: url('../images/topbar-bg.png?1391454765');
+  background-image: url('http://gamestu.github.io/wedding-invitation/images/topbar-bg.png?1391454765');
   height: 48px;
   color: #333;
   left: 0;
@@ -305,7 +305,7 @@ html {
 /* line 25, ../sass/screen.scss */
 body {
   background-color: black;
-  background-image: url('../images/body-bg.png?1404382746');
+  background-image: url('http://gamestu.github.io/wedding-invitation/images/body-bg.png?1404382746');
   font-family: noto, sans-serif; }
 
 /* line 31, ../sass/screen.scss */
@@ -335,7 +335,7 @@ body {
   transition-timing-function: ease; }
   /* line 46, ../sass/screen.scss */
   .header.index {
-    background-image: url('../images/index-header.jpg?1410063086');
+    background-image: url('http://gamestu.github.io/wedding-invitation/images/index-header.jpg?1410063086');
     height: 600px; }
   /* line 50, ../sass/screen.scss */
   .header.gallery {
@@ -416,7 +416,7 @@ body {
   display: table;
   width: 100%;
   background-color: rgba(235, 235, 235, 0.6);
-  background-image: url('../images/topbar-bg.png?1391454765'); }
+  background-image: url('http://gamestu.github.io/wedding-invitation/images/topbar-bg.png?1391454765'); }
   /* line 120, ../sass/screen.scss */
   .info div {
     display: table-cell;
