@@ -1,0 +1,45 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import "layout";
+@import "compass/reset";
+@import "topbar";
+
+html{
+  min-height: 100%;
+}
+
+
+
+body{
+  background-color: white;
+  background-image: image-url("body-bg.png");
+}
+
+.wrapper{
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header{
+  margin-top: $nav-height;
+  background-image: image-url("A1-IMG_6556.jpg");
+  height: 600px;
+  background-position: center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  .title{
+    @include adjust-font-size-to(36px, 2);
+  }
+  .subtitle{
+    @include adjust-font-size-to(36px, 2); 
+  }
+}
+
+
+
+.main-content{
+  background-color: rgba(255,255,255,.6);
+}

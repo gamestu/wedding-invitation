@@ -1,0 +1,28 @@
+@import "compass/css3";
+@import "layout";
+
+.topbar{
+  position: fixed;
+  background-color: rgba(0,0,0,0.6);
+  height: $nav-height;
+  color: white;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  text-align: right;
+  @include transition-property(all);
+  @include transition-duration(0.3s);
+  @include transition-timing-function(ease);
+  &.headroom--unpinned{
+    @include transform(translateY(0 - $nav-height));
+    
+  }
+  li{
+    @include inline-block;
+    @include adjust-font-size-to(20px, 3);
+    &.left{
+      float: left;
+    }
+  }
+}
