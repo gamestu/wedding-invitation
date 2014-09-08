@@ -20,24 +20,74 @@
     @include transform(translateY(-100%));
     
   }
-  li{
-    @include inline-block;
-    @include adjust-font-size-to(18px, 2);
-    padding: 0 $gutter-width;
-    @include transition-property(all);
-    @include transition-duration(0.3s);
-    @include transition-timing-function(ease);
-    a{
-      text-decoration: none;
-      color: inherit;
+  .full-nav{
+    @media (max-width:768px){
+      display: none;
+    }
+    li{
+      @include inline-block;
+      @include adjust-font-size-to(18px, 2);
+      padding: 0 $gutter-width;
+      @include transition-property(all);
+      @include transition-duration(0.3s);
+      @include transition-timing-function(ease);
+      a{
+        text-decoration: none;
+        color: inherit;
+        display: block;
+      }
+      &.left{
+        float: left;
+      }
+      &.active,&:hover:not(.logo){
+        background: #333;
+        color: white;
+      }
+    }
+  }
+  .small-nav{
+    display: none;
+    @media (max-width:768px){
       display: block;
     }
-    &.left{
-      float: left;
-    }
-    &.active,&:hover{
-      background: #333;
-      color: white;
+    & > li{
+      cursor: pointer;
+      @include adjust-font-size-to(18px, 2);
+      padding: 0 $gutter-width;
+      @include transition-property(all);
+      @include transition-duration(0.3s);
+      @include transition-timing-function(ease);
+      &.menu{
+        @include inline-block;
+      }
+      &.menu:hover{
+        .sub-menu{
+          display: block;
+        }  
+      }
+      .sub-menu{
+        display: none;
+        margin: 0 0 - $gutter-width;
+        &>li{
+          padding: 0 $gutter-width;
+        }
+        &>li:hover{
+          background-color: #f2f2f2;
+          color: #333;
+        }
+      }
+      a{
+        text-decoration: none;
+        color: inherit;
+        display: block;
+      }
+      &.left{
+        float: left;
+      }
+      &.active,&:hover:not(.logo){
+        background: #333;
+        color: white;
+      }
     }
   }
 }
